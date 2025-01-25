@@ -2,10 +2,15 @@ import json
 import sys
 import os
 
-# read file
-filePath = os.path.join(os.path.expanduser(
-    '~'), 'Library/Application Support/Code/User/globalStorage/alefragnani.project-manager/projects.json')
+# Determine the file path based on the editor argument
+if len(sys.argv) > 2 and sys.argv[2].lower() == 'windsurf':
+    filePath = os.path.join(os.path.expanduser(
+        '~'), 'Library/Application Support/Windsurf/globalStorage/alefragnani.project-manager/projects.json')
+else:
+    filePath = os.path.join(os.path.expanduser(
+        '~'), 'Library/Application Support/Code/User/globalStorage/alefragnani.project-manager/projects.json')
 
+# read file
 with open(filePath, 'r') as file:
     data = file.read()
 
