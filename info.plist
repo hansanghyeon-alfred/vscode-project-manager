@@ -213,7 +213,7 @@
 				<key>runningsubtext</key>
 				<string>Please wait</string>
 				<key>script</key>
-				<string>/usr/bin/python3 parser.py "{query}" "{var:editor}"</string>
+				<string>/usr/bin/python3 parser.py "{query}" "${editor}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
